@@ -1,0 +1,27 @@
+---
+title: "ACTIVIDAD 6 UD 6"
+output:
+  html_document: default
+  html_notebook: default
+  pdf_document: default
+---
+
+## Actividad GLM
+
+
+Carga el dataset "absentismo.csv"
+```{r}
+df <- read.csv("ACTIVIDAD_6_UD6_absentismo.csv")
+head(df)
+str(df)
+summary(df)
+```
+¿Qué GLM es adecuado para hacer regresión de la variable objetivo "ausencias" ?
+
+- Convierte las variables género en factores. El tipo de escuela en urbana (1) y rural (2) también y programas en A,B,C,D 
+respectivamente. Monta después una `model.matrix` sobre el dataset.
+- Calcula la media de ausencias en función de género y en función de tipo escuela, así también como el tipo de programa.
+- ¿ Se pueden considerar que la media de ausencias en la urbana y la rural iguales? ¿Se puede considerar que las medias en distintos 
+programas son iguales?
+- Aplica un glm binomial negativo para analizar la relación entre ausencias y las variables
+- Seleccionar el mejor modelo con stepAIC
